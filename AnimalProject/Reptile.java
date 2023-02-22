@@ -4,36 +4,38 @@
 //  Represents a Reptile.
 //********************************************************************
 
-public abstract class Reptile extends Animal
+public /*abstract*/ class Reptile extends Animal
 {
    private int numberOfLegs;
-
+    protected boolean poisionous;//child has
+    //protected mean that any child class can acess but nobody else
 
    /**-----------------------------------------------------------------
    *  Creates a reptile with no Legs.
    */
 
-	public Reptile()
-	{
-		//call the default constructor of Animal
-		//happens automatic
-		//super();
+    public Reptile()
+    {
+        //call the default constructor of Animal
+        //happens automatic
+        //super();
 
-		super("reptile");
-		//type = "reptile"; // private data will cause error
-		numberOfLegs = 0;
-	}
+        //super("reptile");
+        //type = "reptile"; // private data will cause error
+        //if it is private we cannot access it 
+        numberOfLegs = 0;
+    }
 
 
 /**-----------------------------------------------------------------
    *  Creates a reptile with n Legs.
    */
 
-	public Reptile( int n_o_L)
-	{
-		super("reptile");
-		numberOfLegs = n_o_L;
-	}
+    public Reptile( int n_o_L)
+    {
+        super("reptile");
+        numberOfLegs = n_o_L;
+    }
 
 
 
@@ -45,16 +47,16 @@ public abstract class Reptile extends Animal
    /*/
   public int getLegs()
   {
-	 return numberOfLegs;
+     return numberOfLegs;
   }
 
   /**-----------------------------------------------------------------
      * This method should return a string indicating how this Reptile moves.
      /*/
-  //public String move()
-  //{
-	//  return "crawl";
-  //}
+  public String move()
+  {
+      return "crawl";
+  }
 
 
 
@@ -63,8 +65,9 @@ public abstract class Reptile extends Animal
   /*/
   public String toString()
   {
-	 return super.toString() +
-	 "\nI have "+getLegs()+ " number of Legs";
+     return super.toString() +
+     "\nI have "+getLegs()+ " number of Legs";
+     //calls gatType from animal
    }
 
 }

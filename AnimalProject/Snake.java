@@ -5,15 +5,26 @@
 //********************************************************************
 
 public class Snake extends Reptile
+//Java and C++ are single inhertience
+//but it can cascade down                                                                                                                                                                                                                                                                                                                                                                                    
+
+
 {
    private int length;
 
    //-----------------------------------------------------------------
    // Creates a snake with the given name and length.
    //-----------------------------------------------------------------
+   
+   
+   
+   public Snake()
+   {
+      
+   }
    public Snake( int snakeLength)
    {
-      super(0);
+      super(0);//sets num of legs
       length = snakeLength;
    }
 
@@ -23,7 +34,7 @@ public class Snake extends Reptile
    public int getLength()
    {
       return length;
-   }
+    }
 
    //-----------------------------------------------------------------
    // Returns a string representation of this snake.

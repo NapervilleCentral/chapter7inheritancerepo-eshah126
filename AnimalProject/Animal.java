@@ -4,12 +4,14 @@
 //  Represents an Animal.
 //********************************************************************
 
-public  abstract class Animal
+public  abstract class Animal//every animal has a type
 {
    private String type;
-   
+   protected boolean poinsed = false; 
 
-    public Animal()
+   
+   
+   public Animal()
     {//this is called by default
         type = "Default";
         
@@ -23,6 +25,12 @@ public  abstract class Animal
       type = animalType;
       
       System.out.println("hello from Animal");
+      //SNAKE IS CHILD CLASS WITHOUT REPTILE
+      
+      
+      
+      
+      //it gets called explicity call, it will call it explicity 
    }
 
    /**-----------------------------------------------------------------
@@ -36,7 +44,8 @@ public  abstract class Animal
     /**-----------------------------------------------------------------
     * This method should return a string indicating how this pet moves.
    /*/
-   abstract public String move();
+   abstract public String move();//have to write it 
+   //does know what to do but you have to write it 
 
 
 

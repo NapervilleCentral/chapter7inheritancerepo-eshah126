@@ -1,4 +1,17 @@
-
+/*
+   
+   NOTES
+   
+   
+   
+   
+   Abstract classes can be initated 
+   Writing abstract classes are for specific purposes 
+   Abstract classses are different from interface
+   becuase they have functionality 
+   
+   
+   */
 
 public class AnimalsClient
 {
@@ -16,6 +29,23 @@ public class AnimalsClient
       //Reptile sue = new Reptile();
       //System.out.println(sue.getType()  );
       //System.out.println( sue );
+      
+      
+      
+      
+      
+      
+      Snake putin = new Snake (24);
+      
+      
+      System.out.println(putin);
+      
+      
+      Cobra me = new Cobra();
+      
+      
+      
+      me.bite(putin);
 
 
 
