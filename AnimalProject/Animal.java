@@ -55,8 +55,8 @@ public  abstract class Animal//every animal has a type
    public String toString()
    {
       String data = "My type is " + type;
-      
-        
+      if (poinsed)
+        data  += "I am poisened";
       return data;  
         
         

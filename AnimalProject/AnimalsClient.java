@@ -41,12 +41,12 @@ public class AnimalsClient
       System.out.println(putin);
       
       
-      Cobra me = new Cobra();
+      Cobra me = new Cobra(24);
       
       
       
       me.bite(putin);
-
+    System.out.println(putin);
 
 
        
