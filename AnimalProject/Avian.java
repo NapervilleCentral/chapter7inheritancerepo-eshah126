@@ -5,10 +5,15 @@
  * @author (your name here)
  * @version (version number or date here)
  */
-public abstract class Avian
+public abstract class Avian extends Animal
+//isflying,wingspan,
+//hawk,raven,etx 
+//is clinent cobra bites bird
 {
     // instance variables - replace the example below with your own
-    private int x;
+    public boolean flying;
+    public String color;
+    public int wingspan;
     
 
     /**
@@ -17,9 +22,50 @@ public abstract class Avian
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public Avain(boolean flying)
     {
-        // put your code here
-        return x + y;
+        super();
+        
+        this.flying = flying;
+            wingspan = 0;
+         color = "White";
+        
     }
+    public boolean isFlying(){
+        
+        
+        
+        return flying;
+    }
+    public String  getColor(){
+    
+        return color;
+    }
+    
+    
+    public String move(){
+    
+        return "flys";
+    }
+    
+    public toString(){
+        
+        super.data += "This birs can "
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

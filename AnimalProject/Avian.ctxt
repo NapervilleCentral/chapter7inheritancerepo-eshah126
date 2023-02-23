@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Avian
+comment0.text=\r\n\ Abstract\ class\ Avian\ -\ write\ a\ description\ of\ the\ class\ here\r\n\r\n\ @author\ (your\ name\ here)\r\n\ @version\ (version\ number\ or\ date\ here)\r\n
+comment1.params=color\ wing_span
+comment1.target=void\ Avain(java.lang.String,\ int)
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment2.params=
+comment2.target=boolean\ isFlying()
+comment3.params=
+comment3.target=java.lang.String\ getColor()
+comment4.params=
+comment4.target=java.lang.String\ move()
+numComments=5
