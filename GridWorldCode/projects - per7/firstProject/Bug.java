@@ -14,7 +14,7 @@
  * @author Cay Horstmann
  */
 
-package info.gridworld.actor;
+ 
 
 import info.gridworld.grid.Grid;
 import info.gridworld.grid.Location;
@@ -26,7 +26,7 @@ import java.awt.Color;
  * it moves. <br />
  * The implementation of this class is testable on the AP CS A and AB exams.
  */
-public class Bug extends Actor
+public class Bug extends Actor1
 {
     /**
      * Constructs a red bug.
@@ -70,11 +70,11 @@ public class Bug extends Actor
      */
     public void move()
     {
-        Grid<Actor> gr = getGrid();
+        Grid<Actor1> gr = getGrid();
         if (gr == null)
             return;
         Location loc = getLocation();
-        Location next = loc.getAdjacentLocation(getDirection());//direction next to bug
+        Location next = loc.getAdjacentLocation(getDirection());
         if (gr.isValid(next))
             moveTo(next);
         else
