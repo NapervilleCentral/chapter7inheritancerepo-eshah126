@@ -89,7 +89,7 @@ public class Actor1
      * @return the grid of this actor, or <code>null</code> if this actor is
      * not contained in a grid
      */
-    public Grid<Actor> getGrid()
+    public Grid<Actor1> getGrid()
     {
         return grid;
     }
@@ -112,13 +112,13 @@ public class Actor1
      * @param gr the grid into which this actor should be placed
      * @param loc the location into which the actor should be placed
      */
-    public void putSelfInGrid(Grid<Actor> gr, Location loc)
+    public void putSelfInGrid(Grid<Actor1> gr, Location loc)
     {
         if (grid != null)
             throw new IllegalStateException(
                     "This actor is already contained in a grid.");
 
-        Actor actor = gr.get(loc);
+        Actor1 actor = gr.get(loc);
         if (actor != null)
             actor.removeSelfFromGrid();
         gr.put(loc, this);
@@ -167,7 +167,7 @@ public class Actor1
         if (newLocation.equals(location))
             return;
         grid.remove(location);
-        Actor other = grid.get(newLocation);
+        Actor1 other = grid.get(newLocation);
         if (other != null)
             other.removeSelfFromGrid();
         location = newLocation;

@@ -26,12 +26,12 @@ import java.awt.Color;
  * it moves. <br />
  * The implementation of this class is testable on the AP CS A and AB exams.
  */
-public class Bug extends Actor1
+public class Bug1 extends Actor1
 {
     /**
      * Constructs a red bug.
      */
-    public Bug()
+    public Bug1()
     {
         setColor(Color.RED);
     }
@@ -40,7 +40,7 @@ public class Bug extends Actor1
      * Constructs a bug of a given color.
      * @param bugColor the color for this bug
      */
-    public Bug(Color bugColor)
+    public Bug1(Color bugColor)
     {
         setColor(bugColor);
     }
@@ -50,8 +50,13 @@ public class Bug extends Actor1
      */
     public void act()
     {
-        if (canMove())
+        if (canMove()){
             move();
+            turn();
+            turn();
+            turn();
+            turn();
+        }
         else
             turn();
     }
@@ -61,7 +66,7 @@ public class Bug extends Actor1
      */
     public void turn()
     {
-        setDirection(getDirection() + Location.HALF_RIGHT);
+        setDirection(getDirection() + Location.HALF_LEFT);
     }
 
     /**
@@ -79,7 +84,7 @@ public class Bug extends Actor1
             moveTo(next);
         else
             removeSelfFromGrid();
-        Flower flower = new Flower(getColor());
+        //Flower flower = new Flower(getColor());
         flower.putSelfInGrid(gr, loc);
     }
 
@@ -90,16 +95,18 @@ public class Bug extends Actor1
      */
     public boolean canMove()
     {
-        Grid<Actor> gr = getGrid();
+        Grid<Actor1> gr = getGrid();
         if (gr == null)
             return false;
         Location loc = getLocation();
         Location next = loc.getAdjacentLocation(getDirection());
         if (!gr.isValid(next))
             return false;
-        Actor neighbor = gr.get(next);
+        Actor1 neighbor = gr.get(next);
         return (neighbor == null) || (neighbor instanceof Flower);
         // ok to move into empty location or onto flower
         // not ok to move onto any other actor
     }
+    
+    
 }
