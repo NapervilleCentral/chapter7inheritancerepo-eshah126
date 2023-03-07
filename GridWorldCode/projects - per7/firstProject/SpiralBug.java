@@ -1,15 +1,23 @@
 
+/**
+ * Write a description of class SpiralBug here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
 import info.gridworld.grid.Grid;
 import info.gridworld.grid.Location;
 import info.gridworld.actor.*;
 import java.awt.Color;
-
+public class SpiralBug
+{
+    
 /**
  * A <code>Bug</code> is an actor that can move and turn. It drops flowers as
  * it moves. <br />
  * The implementation of this class is testable on the AP CS A and AB exams.
  */
-public class ChildBug extends Bug
+
 {
     /**
      * Constructs a red bug.
@@ -83,3 +91,4 @@ public class ChildBug extends Bug
     
     
 }
+    

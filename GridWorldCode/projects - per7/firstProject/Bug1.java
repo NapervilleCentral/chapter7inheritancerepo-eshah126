@@ -52,13 +52,15 @@ public class Bug1 extends Actor1
     {
         if (canMove()){
             move();
-            turn();
-            turn();
-            turn();
-            turn();
+            
         }
         else
             turn();
+            turn();
+            
+            
+            
+            
     }
 
     /**
@@ -66,7 +68,7 @@ public class Bug1 extends Actor1
      */
     public void turn()
     {
-        setDirection(getDirection() + Location.HALF_LEFT);
+        setDirection(getDirection() + Location.LEFT);//HALF_LEFT is constant
     }
 
     /**
@@ -85,7 +87,7 @@ public class Bug1 extends Actor1
         else
             removeSelfFromGrid();
         //Flower flower = new Flower(getColor());
-        flower.putSelfInGrid(gr, loc);
+        //flower.putSelfInGrid(gr, loc);
     }
 
     /**
