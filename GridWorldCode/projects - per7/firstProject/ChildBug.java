@@ -37,16 +37,7 @@ public class ChildBug extends Bug
     public void act()
     {
         
-        int count = 0;
-        int len = 1;
-       if(count<=len){
-           move();
-           count++;
-       }
-       else
-           turn();
-           len++;
-           count = 0;
+        
            
                    
                 

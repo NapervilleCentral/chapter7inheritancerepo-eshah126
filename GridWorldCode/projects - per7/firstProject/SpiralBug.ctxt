@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=SpiralBug
+comment1.params=
+comment1.target=SpiralBug()
+comment1.text=\r\n\ Constructs\ a\ red\ bug.\r\n
+comment2.params=bugColor
+comment2.target=SpiralBug(java.awt.Color)
+comment2.text=\r\n\ Constructs\ a\ bug\ of\ a\ given\ color.\r\n\ @param\ bugColor\ the\ color\ for\ this\ bug\r\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ Moves\ if\ it\ can\ move,\ turns\ otherwise.\r\n
+numComments=4

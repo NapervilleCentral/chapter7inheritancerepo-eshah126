@@ -9,7 +9,8 @@ import info.gridworld.grid.Grid;
 import info.gridworld.grid.Location;
 import info.gridworld.actor.*;
 import java.awt.Color;
-public class SpiralBug
+
+public class SpiralBug extends Bug
 {
     
 /**
@@ -17,21 +18,25 @@ public class SpiralBug
  * it moves. <br />
  * The implementation of this class is testable on the AP CS A and AB exams.
  */
+public int count;
+public int len;
 
-{
     /**
      * Constructs a red bug.
      */
-    public ChildBug()
+    public SpiralBug()
     {
-        setColor(Color.RED);
+        count = 0;
+        len = 0;
+        
+        setColor(Color.BLUE);
     }
 
     /**
      * Constructs a bug of a given color.
      * @param bugColor the color for this bug
      */
-    public ChildBug(Color bugColor)
+    public SpiralBug(Color bugColor)
     {
         setColor(Color.YELLOW);
     }
@@ -45,50 +50,26 @@ public class SpiralBug
     public void act()
     {
         
-        int count = 0;
-        int len = 1;
-       if(count<=len){
+        
+        System.out.println(len +"------" +count);
+       if(count <= len){
            move();
            count++;
-       }
-       else
-           turn();
-           len++;
-           count = 0;
            
-                   
-                
-            
+           
+       }
+       else{
+           turn();
+           
+            len++;
+            count = 0;
+        }
     }
-    public void move()
-    {
-        Grid<Actor> gr = getGrid();
-        if (gr == null)
-            return;
-        Location loc = getLocation();
-        Location next = loc.getAdjacentLocation(getDirection()-180);
-        if (gr.isValid(next))
-            moveTo(next);
-        else
-            removeSelfFromGrid();
-        Flower flower = new Flower(getColor());
-        flower.putSelfInGrid(gr, loc);
-    }
-    public boolean canMove()
-    {
-        Grid<Actor> gr = getGrid();
-        if (gr == null)
-            return false;
-        Location loc = getLocation();
-        Location next = loc.getAdjacentLocation(getDirection()-180);//makes sure that 
-        if (!gr.isValid(next))
-            return false;
-        Actor neighbor = gr.get(next);
-        return (neighbor == null) || (neighbor instanceof Flower);
-        // ok to move into empty location or onto flower
-        // not ok to move onto any other actor
-    }
+        
+        
     
+                   
+               
     
 }
     
