@@ -77,7 +77,9 @@ public /*abstract*/ class Reptile extends Animal
 
 
 
-
+/**
+ * Whole point of this class is too inherit 
+ */
 
 
 

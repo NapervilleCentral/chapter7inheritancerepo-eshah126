@@ -60,6 +60,7 @@ public int len;
        }
        else{
            turn();
+           turn();
            
             len++;
             count = 0;

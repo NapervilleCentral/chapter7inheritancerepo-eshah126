@@ -22,7 +22,7 @@ public class ZBug extends Bug
     public ZBug(int len)
     {
         this.len = len;
-        setColor(Color.BLUE);
+        setColor(Color.YELLOW);
     }
     
 
@@ -34,7 +34,7 @@ public class ZBug extends Bug
      */
     public void act()
     {
-        if(canMove){
+        
             for(int i = 0;i<len;i++){
                 move();
             }
@@ -43,9 +43,12 @@ public class ZBug extends Bug
                 move();
             }
             turn();
+            turn();
+            turn();
+            turn();
             for(int i = 0;i<len;i++){
                 move();
             }
-        }
+        
     }
 }
