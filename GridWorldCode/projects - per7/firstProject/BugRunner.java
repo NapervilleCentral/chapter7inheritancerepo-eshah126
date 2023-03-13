@@ -38,6 +38,7 @@ public class BugRunner
         world.add(new Rock());
         world.add(new SpiralBug());
         world.add(new ZBug(4));
+        world.add(new Sbug());
         world.show();
     }
 }

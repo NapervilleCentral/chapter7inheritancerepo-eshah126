@@ -15,7 +15,9 @@ public class ZBug extends Bug
 {
     // instance variables - replace the example below with your own
     public int len;
-
+    public Location location;
+    public int steps;
+    public int change;
     /**
      * Constructor for objects of class Z
      */
@@ -23,6 +25,8 @@ public class ZBug extends Bug
     {
         this.len = len;
         setColor(Color.YELLOW);
+        setDirection(Location.EAST);// the Z has to start thi way __>
+        
     }
     
 
@@ -34,21 +38,20 @@ public class ZBug extends Bug
      */
     public void act()
     {
-        
-            for(int i = 0;i<len;i++){
-                move();
+       if (canMove() && steps < len && change < 3) {
+            move();
+            steps ++;
+        }else{
+            if (getDirection() == Location.EAST && change < 3){
+                setDirection(Location.SOUTHWEST);
+                change++;
+            }else if (getDirection() == Location.SOUTHWEST && change < 3){
+                setDirection(Location.EAST);
+                change ++;
             }
-            turn();
-            for(int i = 0;i<len;i++){
-                move();
-            }
-            turn();
-            turn();
-            turn();
-            turn();
-            for(int i = 0;i<len;i++){
-                move();
-            }
-        
+            steps = 0;
+            
+        } 
+            
     }
 }
