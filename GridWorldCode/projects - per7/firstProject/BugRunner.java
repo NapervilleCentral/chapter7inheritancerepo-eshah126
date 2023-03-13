@@ -33,7 +33,7 @@ public class BugRunner
         ActorWorld world = new ActorWorld();
         
         
-        world.add(new ChildBug());
+        //world.add(new ChildBug());
         world.add(new Bug());
         world.add(new Rock());
         world.add(new SpiralBug());

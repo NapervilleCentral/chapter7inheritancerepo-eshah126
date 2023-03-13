@@ -16,6 +16,13 @@ public class Sbug extends Bug
     public Location location;
      public int count;
       public int len;
+      public int steps;
+      public int steps1;
+      public int steps2;
+      public int steps3;
+      public int steps4;
+      public int change;
+      public int len1;
     /**
      * Constructor for objects of class Ebug
      */
@@ -25,6 +32,7 @@ public class Sbug extends Bug
         setDirection(Location.WEST);
         count = 0;
         len = 4;
+        len1 = 4;
     }
 
     /**
@@ -36,10 +44,39 @@ public class Sbug extends Bug
     public void act()
     {
         
-        if(count<=len){
+        if (canMove() && steps < len && change < 3) {
             move();
+            steps ++;
+            
+        } else {
+            setDirection(Location.SOUTH);
+            if (canMove() && steps1 < len1 && change < 3) {
+            move();
+            steps1 ++;
+        } else if (canMove() && steps2 < len1 && change < 3) {
+            setDirection(Location.EAST);
+            move();
+            steps2 ++;
+        } else if(canMove() && steps3 < len1 && change < 3){
+            setDirection(Location.SOUTH);
+            move();
+            steps3 ++;
+            
+            
+            
+        } else if(canMove() && steps4 <len1 && change < 3 ){
+            setDirection(Location.WEST);
+            move();
+            steps4++;
+            
             
         }
-       
+    }
+        
+        
+        
+        
+        
+        
 }
 }
