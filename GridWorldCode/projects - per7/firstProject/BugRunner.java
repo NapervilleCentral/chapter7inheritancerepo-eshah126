@@ -34,11 +34,18 @@ public class BugRunner
         
         
         //world.add(new ChildBug());
+        /**
         world.add(new Bug());
         world.add(new Rock());
         world.add(new SpiralBug());
         world.add(new ZBug(4));
         world.add(new Sbug());
+        **/
+        
+        int[] arr = {6,7,3,5,1,4,6,1,2,1,4,3,1,5,6,2,3,5,6};//once reaching the end, start the whole thing again
+         DancingBug bug1 = new DancingBug(arr);
+     //when reachers length set is 
+        //world.add(new DancingBugRunner());
         world.show();
     }
 }
