@@ -31,7 +31,7 @@ public class DancingBug extends Bug
      */
     public void act(){
         
-        if(count < arr.length-1()){
+        if(count < arr.length-1){
             for(int i = 0; i < arr[count]; i++){
                 turn();
             }

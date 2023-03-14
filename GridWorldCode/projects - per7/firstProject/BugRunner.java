@@ -43,7 +43,8 @@ public class BugRunner
         **/
         
         int[] arr = {6,7,3,5,1,4,6,1,2,1,4,3,1,5,6,2,3,5,6};//once reaching the end, start the whole thing again
-         DancingBug bug1 = new DancingBug(arr);
+        DancingBug bug1 = new DancingBug(arr);
+         world.add(bug1);
      //when reachers length set is 
         //world.add(new DancingBugRunner());
         world.show();
